@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="CSS/style.css">
+	<link rel="shortcut icon" href="img/iluminii-litterae_icon.png" type="image/x-icon">
+
+	<title>Admin Litterae</title>
+</head>
+
+<body>
+
+
+	<!-- Parte do sidebar começa -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-book'></i>
+			<span class="text">LitteraeAdmin</span>
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href="painelinicial.php">
+					<i class="bx bxs-dashboard"></i>
+					<span class="text">Painel inicial</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="usuarios.html">
+					<i class="bx bxs-user"></i>
+					<span class="text">Usuários</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="livros.html">
+					<i class='bx bxs-book'></i>
+					<span class="text">Livros</span>
+				</a>
+			</li>
+
+			<li class="active">
+				<a href="eventos.html">
+					<i class="bx bxs-calendar-event"></i>
+					<span class="text">Eventos</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog'></i>
+					<span class="text">Configurações</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle'></i>
+					<span class="text">Sair</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- Sidebar acaba aqui -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- Navbar aqui-->
+		<nav>
+			<i class='bx bx-menu'></i>
+			<a href="#" class="nav-link">Categorias</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Pesquisar">
+					<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell'></i>
+				<span class="num">8</span> <!--Ícone das notificações-->
+			</a>
+			<a href="#" class="profile">
+				<img src="img/people.png"> <!--Imagem do usuário logado no momento-->
+			</a>
+		</nav>
+		<!-- Navbar acaba -->
+
+		<!-- Conteúdo central começa -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Dashboard - Litterae</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="./painelinicial.php">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right'></i></li>
+						<li>
+							<a class="active" href="#">Eventos</a>
+						</li>
+					</ul>
+				</div>
+				<a href="https://web.whatsapp.com/" target="_blank" class="btn-download">
+					<i class='bx bxl-whatsapp'></i>
+					<span class="text">WhatsApp</span>
+				</a>
+			</div>
+
+			<!-------- página de eventos começa aqui ----------->
+
+			<ul class="box-info">
+				<li>
+					<span class="text">
+						<h3>[Nome do evento]</h3>
+						<p>[Descrição do evento]</p>
+						<div id="li-button">
+							<button id="open-modal2">Deletar</button>
+							<button id="open-modal">Ver informações</button>
+						</div>
+					</span>
+				</li>
+
+			</ul>
+
+			<!----- Conteúdo do modal um começa ----->
+
+			<div id="fade" class="hide"></div>
+			<div id="modal" class="hide">
+				<div class="modal-header">
+					<h2>[Nome do evento]</h2>
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAadJREFUWEft1j1rFVEQxvFfsBI/SD6DFmKhTSSgKZKARosgWAimNE2ijSlTKEpSiBBfCATSKChikBQWBrFInc8RxPjCwF45LDees/casoE93Z4zO/PfZ2ZnzoiWrZGW8eiAchnpFOoUyimQOz/xNXQOX3CQ+9Lk/Dy2S+2bKBSOP+AdJvCzIMgy7uIaXhfYFzfGUXzFmcrpehXkX1APMV/Z/8IlbOWgShUKu1eYThxuYAoRrL4eYCHZ/IyL2P9fQOEnoJ7jRuL0JWbwO9m7h6Xk+RPGSmB6QXLQ6Xk/qGeYrYzmEHXTW1Fz4/heGqQ0ZXWoJ7idbD7GXg3mTVX8P0phBlEo9b2KW4cEe4uraAQzLFC8/wh3alCbmGzYq/66GCRlafx+QKHOleMAak3KQtWVWv08xS6i2NM/7HLTOmqaslb99v269bE1xlN4URsdARNdu9/ouI/FoxwdMVy/4XQVJCb39UNgehzpcI3REsP1Y65JNqmhC3g/4PXjJtZyMIM0xrPYadhjjuyCVvKBQ9s0SdnQwUocdEA5lTqFOoVyCuTOW1dDfwATzlQlt12SwgAAAABJRU5ErkJggg=="
+						id="close-modal" />
+				</div>
+				<div class="modal-body">
+					<img src="./img/Fake freedom.png" alt="[Banner do evento]">
+					<p><i>[Data de início] - [Data de encerramento]</i></p><br>
+					<p>[Descrição do evento]</p>
+				</div>
+			</div>
+
+			<!----- Conteúdo do modal um acaba ----->
+
+			<!----- Conteúdo do modal dois começa ----->
+
+			<div id="fade2" class="hide2"></div>
+			<div id="modal2" class="hide2">
+				<div class="modal-header_2">
+					<h3>Tem certeza que deseja deletar [nome do evento]?</h3>
+				</div>
+				<div class="modal-body_2">
+					<p>Não será possível reverter esta ação.</p>
+				</div>
+				<div class="modal-button_2">
+					<button>Sim</button>
+					<button id="close-modal2">Não</button>
+				</div>
+			</div>
+
+			<!----- Conteúdo do modal dois acaba ----->
+
+		</main>
+	</section>
+
+	<script src="JavaScript/script_dashboard.js"></script>
+</body>
+
+</html>
